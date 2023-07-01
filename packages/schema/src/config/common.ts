@@ -83,6 +83,8 @@ export default defineUntypedSchema({
    * ------| store/
    * ------| server/
    * ```
+   * 
+   * @note Setting this property modifies where Nuxt looks for configuration files such as ```app.config.ts```
    */
   srcDir: {
     $resolve: async (val, get) => resolve(await get('rootDir'), val || '.')
